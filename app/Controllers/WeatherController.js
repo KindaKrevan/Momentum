@@ -1,7 +1,9 @@
 import { weatherService } from '../Services/WeatherService.js';
 
 export class WeatherController {
-  constructor() {}
+  constructor() {
+    this.getWeather();
+  }
 
   async getWeather() {
     try {
