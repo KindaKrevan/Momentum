@@ -12,6 +12,11 @@ class TaskService {
     const res = await taskApi.post('', newTask);
     ProxyState.tasks = [...ProxyState.tasks, new Task(res.data)];
   }
+
+  async deleteTask(id) {
+    const res = await taskApi.delete(id);
+    ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id);
+  }
 }
 
 export const taskService = new TaskService();

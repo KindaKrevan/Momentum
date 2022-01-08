@@ -34,4 +34,13 @@ export class TaskController {
       console.log(error.message);
     }
   }
+
+  async deleteTask(id) {
+    try {
+      const foundTask = ProxyState.tasks.find(t => t.id == id);
+      await taskService.deleteTask(id);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 }
