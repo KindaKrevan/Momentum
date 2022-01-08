@@ -31,7 +31,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="position-absolute top-50 start-50 translate-middle"><h1>CLOCK HERE</h1></div>
+            <div class="position-absolute top-50 start-50 translate-middle"><h1 style="font-size: 100px" class="clock"></h1></div>
           </div>
         </div>
       </div>
@@ -40,15 +40,18 @@
       <div class="m-2">Image Data</div>
       <div class="m-2">Quote Data</div>
       <div class="btn-group dropup m-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">To-Do</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tasks</button>
         <ul class="dropdown-menu p-2">
+          <h4 class="text-center">Task List</h4>
+          <p class="text-center" style="font-size: 12px">X/X Completed</p>
+          <hr />
           <div class="p-2" id="tasks">
             <!-- Tasks pushed in here. -->
             <p>There Be No Tasks Here</p>
           </div>
           <div class="p-2">
             <form onsubmit="app.taskController.addNewTask()">
-              <input type="text" name="newTask" placeholder="New To-Do..." id="" required />
+              <input type="text" name="newTask" placeholder="Add a new task..." id="" required />
             </form>
           </div>
         </ul>
@@ -60,7 +63,6 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
       integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="

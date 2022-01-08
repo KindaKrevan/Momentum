@@ -1,8 +1,10 @@
-import { EventEmitter } from "./Utils/EventEmitter.js";
-import { isValidProp } from "./Utils/isValidProp.js";
+import { EventEmitter } from './Utils/EventEmitter.js';
+import { isValidProp } from './Utils/isValidProp.js';
 
 class AppState extends EventEmitter {
   tasks = [];
+
+  weather = '';
 }
 
 export const ProxyState = new Proxy(new AppState(), {
