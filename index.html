@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Momentum</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex align-items-center justify-content-between">
+        <a class="navbar-brand ms-3" href="#">
+          <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt="" loading="lazy" />
+          <span class="ms-2">Momentum</span>
+        </a>
+        <div class="m-2">Weather Data</div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div id="app"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light d-flex align-items-center justify-content-between">
+      <div class="m-2">Image Data</div>
+      <div class="m-2">Quote Data</div>
+      <div class="btn-group dropup m-2">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">To-Do</button>
+        <ul class="dropdown-menu p-2">
+          <div class="p-2" id="tasks">
+            <!-- Tasks pushed in here. -->
+            <p>There Be No Tasks Here</p>
+          </div>
+          <div class="p-2">
+            <form onsubmit="app.taskController.addNewTask()">
+              <input type="text" name="newTask" placeholder="New To-Do..." id="" required />
+            </form>
+          </div>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app/main.js" type="module"></script>
+  </body>
+</html>
