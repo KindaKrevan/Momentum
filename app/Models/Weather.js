@@ -1,5 +1,8 @@
 export class Weather {
-  constructor() {}
+  constructor(data) {
+    this.location = data.name;
+    this.temp = data.main.temp;
+  }
 
   get Template() {
     return `

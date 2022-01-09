@@ -6,8 +6,10 @@ class ImageService {
     const res = await imgApi.get();
     ProxyState.image = new Image(res.data);
     let image = res.data.largeImgUrl;
+    let author = res.data.author;
     document.body.style.backgroundImage = `url(${image})`;
     document.body.style.backgroundSize = `cover`;
+    document.getElementById('imgAuthor').innerText = `Image Credit: ${author}`;
   }
 }
 
