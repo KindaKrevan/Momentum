@@ -4,7 +4,11 @@ import { isValidProp } from './Utils/isValidProp.js';
 class AppState extends EventEmitter {
   tasks = [];
 
-  weather = '';
+  weather = [];
+
+  quotes = [];
+
+  image = '';
 }
 
 export const ProxyState = new Proxy(new AppState(), {

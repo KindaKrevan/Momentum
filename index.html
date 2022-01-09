@@ -38,7 +38,7 @@
     </main>
     <footer class="bg-dark text-light d-flex align-items-center justify-content-between">
       <div class="m-2">Image Data</div>
-      <div class="m-2">Quote Data</div>
+      <div class="m-2" id="quotes">Quote Data</div>
       <div class="btn-group dropup m-2">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tasks</button>
         <ul class="dropdown-menu p-2">
@@ -47,7 +47,6 @@
           <hr />
           <div class="p-2" id="tasks">
             <!-- Tasks pushed in here. -->
-            <p>There Be No Tasks Here</p>
           </div>
           <div class="p-2">
             <form onsubmit="app.taskController.addNewTask()">
