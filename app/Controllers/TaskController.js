@@ -43,4 +43,12 @@ export class TaskController {
       console.log(error.message);
     }
   }
+
+  async taskComplete() {
+    try {
+      await taskService.taskComplete();
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 }
