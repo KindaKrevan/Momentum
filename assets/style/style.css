@@ -2,3 +2,10 @@
 .dropdown-menu {
   min-width: 200px;
 }
+
+.author {
+  display: none;
+}
+.quote:hover + .author {
+  display: block;
+}

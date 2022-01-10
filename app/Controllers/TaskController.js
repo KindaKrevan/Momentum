@@ -1,4 +1,5 @@
 import { ProxyState } from '../AppState.js';
+import { confirm } from '../Services/SAService.js';
 import { taskService } from '../Services/TasksService.js';
 
 function _drawTasks() {
@@ -37,18 +38,20 @@ export class TaskController {
 
   async deleteTask(id) {
     try {
-      ProxyState.tasks.find(t => t.id == id);
-      await taskService.deleteTask(id);
+      if (window.confirm()) {
+        await taskService.deleteTask(id);
+      }
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
     }
   }
 
-  async taskComplete() {
+  async taskComplete(id) {
+    debugger;
     try {
-      await taskService.taskComplete();
+      await taskService.taskComplete(id);
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
     }
   }
 }

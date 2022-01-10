@@ -11,10 +11,10 @@ export class Task {
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" ${
             this.completed ? 'checked' : ''
-          } onclick="app.taskController.taskComplete()"/>
+          } onclick="app.taskController.taskComplete('${this.id}')"/>
           <label class="form-check-label" for="flexCheckDefault">${this.description}
-          <i class="mdi mdi-delete-forever text-danger" onclick="app.taskController.deleteTask('${this.id}')"></i>
           </label>
+          <i class="mdi mdi-delete-forever text-danger" onclick="app.taskController.deleteTask('${this.id}')"></i>
         </div>
     `;
   }

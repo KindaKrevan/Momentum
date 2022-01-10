@@ -7,8 +7,8 @@ export class Quote {
   get Template() {
     return `
     <div>
-      <div>${this.content}</div>
-      <div>${this.author}</div>
+      <div class='quote'>"${this.content}"</div>
+      <div class='author'>${this.author}</div>
     </div>
     `;
   }

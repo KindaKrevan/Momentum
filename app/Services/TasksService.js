@@ -19,9 +19,11 @@ class TaskService {
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id);
   }
 
-  async taskComplete() {
-    const res = await taskApi.put(res.data.complete, complete);
-    console.log(res.data);
+  async taskComplete(id) {
+    const done = ProxyState.tasks.find(t => t.id === id);
+    done.completed = !this.completed;
+    const res = await taskApi.put(done.id, done);
+    ProxyState.tasks = ProxyState.tasks;
   }
 }
 

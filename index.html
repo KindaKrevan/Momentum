@@ -31,14 +31,16 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="position-absolute top-50 start-50 translate-middle"><h1 style="font-size: 100px" class="clock" onload="currentTime()"></h1></div>
+            <div class="position-absolute top-50 start-50 translate-middle text-light">
+              <h1 style="font-size: 100px" id="clock" onload="currentTime()"></h1>
+            </div>
           </div>
         </div>
       </div>
     </main>
     <footer class="bg-dark text-light d-flex align-items-center justify-content-between">
       <div class="m-2" id="imgAuthor"></div>
-      <div class="m-2" id="quotes">Quote Data</div>
+      <div class="text-center m-2" id="quotes">Quote Data</div>
       <div class="btn-group dropup m-2">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tasks</button>
         <ul class="dropdown-menu p-2">
@@ -68,6 +70,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app/main.js" type="module"></script>
     <script src="app/clock.js"></script>
   </body>
