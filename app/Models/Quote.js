@@ -8,7 +8,7 @@ export class Quote {
     return `
     <div>
       <div class='quote'>"${this.content}"</div>
-      <div class='author'>${this.author}</div>
+      <div class='author'>- ${this.author}</div>
     </div>
     `;
   }
